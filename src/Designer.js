@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavbarPage } from './Navbar'
+import { NavbarPage } from './NavbarPage'
 
 export const Designer = () => {
     return (
