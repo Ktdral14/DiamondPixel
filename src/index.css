@@ -1,30 +1,40 @@
 :root {
-  --primary-color: #00A8E8;
-  --secondary-color: #007EA7;
+  --primary-color: #00a8e8;
+  --secondary-color: #007ea7;
   --primary-black-color: #003459;
 }
-html, body, #root {
+@font-face {
+  font-family: "Lobster";
+  src: url(./assets/fonts/lobster/Lobster\ 1.4.otf);
+}
+@font-face {
+  font-family: "VCR-OSD-MONO";
+  src: url(./assets/fonts/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf)
+    format("truetype");
+}
+html,
+body,
+#root {
   height: 100%;
-  
 }
 html::-webkit-scrollbar {
   background-color: #ffffff;
 }
 html::-webkit-scrollbar-thumb {
-  background: #00A8E8;
+  background: #00a8e8;
   border-radius: 0px 0px 4px 4px;
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 .titlenav {
@@ -38,7 +48,7 @@ code {
 }
 .nav-custom {
   top: 0;
-  background-color: #00A8E8;
+  background-color: #00a8e8;
   position: fixed;
   z-index: 2;
   width: 100%;
@@ -59,21 +69,31 @@ code {
   font-weight: bold;
 }
 .btn-custom {
-  background-color: #007EA7;
+  background-color: #007ea7;
   color: white;
   font-weight: 500;
 }
 .btn-custom:hover {
-  color: #00A8E8;
+  color: #00a8e8;
   background-color: white;
 }
 .cir {
   border-radius: 1000rem;
-  background-color: #00A8E8;
+  background-color: #00a8e8;
   height: 50px;
   width: 50px;
 }
+.eslogan {
+  font-family: "Lobster";
+  font-size: 5.0rem;
+}
+.pixel{
+  font-family: "VCR-OSD-MONO";
+}
 
-#conocenos, #principal, #contacto, #desinger {
+#conocenos,
+#principal,
+#contacto,
+#desinger {
   padding-top: 70px;
 }

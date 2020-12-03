@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavbarPage } from './Navbar'
+import { NavbarPage } from './NavbarPage'
 import logo from './assets/logo-diamond.svg'
 
 
@@ -8,13 +8,13 @@ export const Main = () => {
         <>
             <NavbarPage />
             <div id="principal" className="container-fluid h-100">
-            <h1 className="text-center mt-1">Te hacemos feliz en 8 bits!</h1>
+                <h1 className="text-center mt-1 eslogan">Te hacemos feliz en 8 bits!</h1>
                 <div className="row h-100">
                     <div className="col-5">
                         <img src={logo} alt="logo" width="200px"></img>
                     </div>
                     <div className="col-5">
-                        
+
                     </div>
                 </div>
             </div>
