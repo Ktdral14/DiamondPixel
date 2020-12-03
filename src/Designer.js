@@ -1,11 +1,17 @@
 import React from 'react'
-import { Navbar } from './Navbar'
+import { NavbarPage } from './Navbar'
 
 export const Designer = () => {
     return (
         <>
-            <Navbar />
-            <h1>Designer</h1>
+            <NavbarPage />
+            <div id="desinger" className="container-fluid h-100">
+                <div className="row">
+                    <div className="col-12">
+                        <h1> CREA TU DISEÑO</h1>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
