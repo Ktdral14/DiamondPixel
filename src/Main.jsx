@@ -1,7 +1,9 @@
 import React from 'react'
-import { NavbarPage } from './NavbarPage'
+
 import logo from './assets/logo-diamond.svg'
 
+import { NavbarPage } from './NavbarPage'
+import { About } from './About'
 
 export const Main = () => {
     return (
@@ -14,7 +16,6 @@ export const Main = () => {
                         <img src={logo} alt="logo" width="200px"></img>
                     </div>
                     <div className="col-5">
-
                     </div>
                 </div>
             </div>
@@ -28,9 +29,7 @@ export const Main = () => {
                             <div className="col-11">
                                 <h1>Conocenos</h1>
                             </div>
-                            <div className="col-12 mt-2">
-                                <h2>¿Quienes somos?</h2>
-                            </div>
+                            <About />
                         </div>
                     </div>
                 </div>

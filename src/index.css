@@ -12,6 +12,21 @@
   src: url(./assets/fonts/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf)
     format("truetype");
 }
+
+@font-face {
+  font-family: "04b_30";
+  src: url(./assets/fonts/04b_30/04B_30__.TTF) format("truetype");
+}
+
+@font-face {
+  font-family: "The_west_gate";
+  src: url(./assets/fonts/the_west_gate/The\ West\ Gate.ttf) format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 #root {
@@ -85,10 +100,15 @@ code {
 }
 .eslogan {
   font-family: "Lobster";
-  font-size: 5.0rem;
+  font-size: 5rem;
 }
-.pixel{
-  font-family: "VCR-OSD-MONO";
+.pixel {
+  font-family: "04b_30";
+}
+
+.diamond {
+  font-family: "Lobster";
+  font-size: 1.5rem;
 }
 
 #conocenos,
