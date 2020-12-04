@@ -1,5 +1,5 @@
 import React from 'react'
-import { products } from './products'
+import { products } from './assets/data/products'
 
 export const Products = () => {
     return (

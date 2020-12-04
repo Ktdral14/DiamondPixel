@@ -20,7 +20,7 @@ export const NavbarPage = (props) => {
                                     <span className="link-custom">Principal</span>
                                 </Nav.Link>
                                 <Nav.Link href="#conocenos">
-                                    <span className="link-custom">Conocenos</span>
+                                    <span className="link-custom">Conócenos</span>
                                 </Nav.Link>
                                 <Nav.Link href="#contacto">
                                     <span className="link-custom">Contacto</span>

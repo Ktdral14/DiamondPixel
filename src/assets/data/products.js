@@ -31,7 +31,7 @@ export const products = [
     },
     {
         nombre: 'Minions',
-        categoria: 'Peliculas',
+        categoria: 'Películas',
         img: 'http://diamond-pixel.mante.hosting.acm.org/recursos/producto-8.jpg'
     },
     {
