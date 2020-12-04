@@ -5,8 +5,8 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons/faCheck";
 
 export const MisionVisionValues = () => {
     return (
-        <div className="mision-vision-values text-white h-100 my-5">
-            <div className="h-100 row justify-content-around text-center">
+        <div className="text-white h-100 my-5">
+            <div className="h-100 mision-vision-values row justify-content-around text-center">
                 <div className="col-md-3 col-lg-3 col-xl-3 mt-4 mx-4 h-100">
                     <h1>MISIÓN</h1>
                     <hr className="line-divider" />

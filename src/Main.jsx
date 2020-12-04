@@ -14,7 +14,7 @@ export const Main = () => {
     return (
         <>
             <NavbarPage inicio={true} />
-            <div id="principal" className="container-fluid">
+            <div id="principal" className="container-fluid h-100">
                 <h1 className="text-center mt-1 eslogan d-none d-md-block">Te hacemos feliz en 8 bits!</h1>
                 <div className="row h-100">
                     <div className="col-12 text-center">

@@ -202,6 +202,8 @@ code {
 .card {
   border: none;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 .card-title,
 .card-subtitle {
@@ -213,14 +215,23 @@ code {
 }
 .card-body {
   background-color: #00a8e8;
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px 20px 20px 20px;
   z-index: 100;
-  position: relative;
+  position: absolute;
+  transition: all .23s ease;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  transform: translate(-100%);
 }
 .card-img-top {
-  position: relative;
-  top: 30px;
+  /* position: relative; */
+  /* top: 30px; */
   border-radius: 20px 20px;
+}
+.card:hover > .card-body {
+  visibility: visible;
+  transform: translateX(10%);
 }
 .team-img {
   position: relative;
