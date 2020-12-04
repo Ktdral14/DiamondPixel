@@ -10,7 +10,7 @@ export const NavbarPage = (props) => {
     return (
         <header>
             <Navbar className="nav-custom" expand="lg">
-                <Navbar.Brand ><Link className="titlenav" to="/"><span className="diamond">DIAMOND</span> <span className="pixel">PIXEL</span></Link></Navbar.Brand>
+                <Navbar.Brand ><Link className="titlenav" to="/"><span className="diamond">Diamond</span> <span className="pixel">Pixel</span></Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 {
                     estaEnInicio ?

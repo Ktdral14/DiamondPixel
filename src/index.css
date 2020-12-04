@@ -58,6 +58,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+#basic-navbar-nav {
+  background-color: #00a8e8;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+}
 .titlenav {
   text-decoration: none;
   color: white;
@@ -71,7 +76,7 @@ code {
   top: 0;
   background-color: #00a8e8;
   position: fixed;
-  z-index: 2;
+  z-index: 200;
   width: 100%;
   height: 60px;
 }
@@ -102,17 +107,40 @@ code {
   border-radius: 1000rem;
   background-color: #00a8e8;
   height: 50px;
+  position: relative;
+  left: -42px;
   width: 50px;
+  z-index: 1;
+}
+.cir-centro {
+  border-radius: 1000rem;
+  z-index: 100;
+  background-color: #ffffff;
+  height: 30px;
+  position: relative;
+  left: 20%;
+  top: 20%;
+  width: 30px;
 }
 .eslogan {
   font-family: "Lobster";
-  font-size: 5rem;
+  font-size: 4.5rem;
+  white-space: nowrap;
+  margin: 0 auto;
+  overflow: hidden;
+  animation: typing 4s steps(40, end);
+}
+@keyframes typing {
+  from { width: 0;}
+  to {width: 100%;}
 }
 .pixel {
   font-family: "04b_30";
+  letter-spacing: 0.2rem;
 }
 .diamond {
-  font-family: "Lobster";
+  font-family: "The_west_gate";
+  letter-spacing: 0.2rem;
   font-size: 1.5rem;
 }
 .line-divider {
@@ -124,9 +152,69 @@ code {
   background-color: #003459;
 }
 
+.eslogan-sm {
+  font-family: "Lobster";
+  font-size: 3rem;
+}
 #conocenos,
 #principal,
 #contacto,
-#desinger {
+#desinger,
+#productos {
   padding-top: 70px;
+}
+.arrowAnimate {
+  animation-name: animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes animation {
+  from {
+    transform: translateY(-4px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(4px);
+  }
+}
+.title-section {
+  font-weight: bold;
+  color: #003459;
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.decoracion {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0; 
+  height: 0; 
+  border-left: 500px solid #003459;
+  border-top: 100px solid transparent;
+  border-bottom: 0px solid transparent;
+}
+.card {
+  border: none;
+  cursor: pointer;
+}
+.card-title, .card-subtitle {
+  color: #ffffff;
+}
+.card-title {
+  font-size: 26px;
+  font-weight: bold;
+}
+.card-body {
+  background-color: #00a8e8;
+  border-radius: 20px 20px 0 0;
+  z-index: 100;
+  position: relative;
+}
+.card-img-top {
+  position: relative;
+  top: 30px;
+  border-radius: 20px 20px;
 }
