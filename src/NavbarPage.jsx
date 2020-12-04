@@ -1,13 +1,12 @@
+import React from 'react'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+import { Nav, Navbar } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPen } from '@fortawesome/free-solid-svg-icons/faPen'
-import React from 'react'
-import { Nav, Navbar } from 'react-bootstrap'
-import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 export const NavbarPage = (props) => {
 
     const estaEnInicio = props.inicio
-    console.log(estaEnInicio);
     return (
         <header>
             <Navbar className="nav-custom" expand="lg">

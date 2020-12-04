@@ -4,6 +4,8 @@ import logo from './assets/logo-diamond.svg'
 
 import { NavbarPage } from './NavbarPage'
 import { About } from './About'
+import { MisionVisionValues } from './MisionVisionValues'
+import { Team } from './Team'
 
 export const Main = () => {
     return (
@@ -30,6 +32,24 @@ export const Main = () => {
                                 <h1>Conocenos</h1>
                             </div>
                             <About />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="valores" className="container-fluid">
+                <MisionVisionValues />
+            </div>
+            <div id="integrantes" className="container-fluid">
+                <div className="row h-100">
+                    <div className="col-12">
+                        <div className="row justify-content-center align-items-center">
+                            <div className="col-1">
+                                <div className="cir"></div>
+                            </div>
+                            <div className="col-11">
+                                <h1>Equipo de trabajo</h1>
+                            </div>
+                            <Team />
                         </div>
                     </div>
                 </div>

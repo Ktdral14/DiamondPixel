@@ -111,10 +111,17 @@ code {
 .pixel {
   font-family: "04b_30";
 }
-
 .diamond {
   font-family: "Lobster";
   font-size: 1.5rem;
+}
+.line-divider {
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+}
+.mision-vision-values {
+  background-color: #003459;
 }
 
 #conocenos,
