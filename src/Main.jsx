@@ -8,8 +8,8 @@ import { About } from './About'
 export const Main = () => {
     return (
         <>
-            <NavbarPage />
-            <div id="principal" className="container-fluid h-100">
+            <NavbarPage inicio={true} />
+            <div id="principal" className="container-fluid">
                 <h1 className="text-center mt-1 eslogan">Te hacemos feliz en 8 bits!</h1>
                 <div className="row h-100">
                     <div className="col-5">
@@ -19,7 +19,7 @@ export const Main = () => {
                     </div>
                 </div>
             </div>
-            <div id="conocenos" className="container-fluid h-100">
+            <div id="conocenos" className="container-fluid">
                 <div className="row h-100">
                     <div className="col-12">
                         <div className="row justify-content-center align-items-center">
@@ -34,7 +34,7 @@ export const Main = () => {
                     </div>
                 </div>
             </div>
-            <div id="contacto" className="container-fluid h-100">
+            <div id="contacto" className="container-fluid">
                 <div className="row h-100">
                     <div className="col-12">
                         <div className="row justify-content-center align-items-center">

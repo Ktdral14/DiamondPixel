@@ -23,8 +23,14 @@
   src: url(./assets/fonts/the_west_gate/The\ West\ Gate.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Open_sans";
+  src: url(./assets/fonts/Open_Sans/OpenSans-Regular.ttf) format("truetype");
+}
+
 html {
   scroll-behavior: smooth;
+  font-family: "Open_Sans";
 }
 
 html,

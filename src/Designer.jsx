@@ -4,7 +4,7 @@ import { NavbarPage } from './NavbarPage'
 export const Designer = () => {
     return (
         <>
-            <NavbarPage />
+            <NavbarPage inicio={false} />
             <div id="desinger" className="container-fluid h-100">
                 <div className="row">
                     <div className="col-12">
