@@ -33,7 +33,7 @@ export const Main = () => {
                                     <div className="cir-centro"></div>
                                 </div>
                             </div>
-                            <div className="col-11">
+                            <div className="col-11 p-0">
                                 <h1 className="title-section">Productos</h1>
                             </div>
                             <Products />
@@ -50,7 +50,7 @@ export const Main = () => {
                                     <div className="cir-centro"></div>
                                 </div>
                             </div>
-                            <div className="col-11">
+                            <div className="col-11 p-0">
                                 <h1 className="title-section">Conócenos</h1>
                             </div>
                             <About />
@@ -70,7 +70,7 @@ export const Main = () => {
                                     <div className="cir-centro"></div>
                                 </div>
                             </div>
-                            <div className="col-11">
+                            <div className="col-11 p-0">
                                 <h1 className="title-section">Equipo de trabajo</h1>
                             </div>
                             <Team />
@@ -87,12 +87,17 @@ export const Main = () => {
                                     <div className="cir-centro"></div>
                                 </div>
                             </div>
-                            <div className="col-11">
+                            <div className="col-11 p-0">
                                 <h1 className="title-section">Contacto</h1>
                             </div>
                             <Contact />
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="footer container-fluid">
+                <div className="row">
+                    <h1>AQUI VA EL FOOTER</h1>
                 </div>
             </div>
         </>

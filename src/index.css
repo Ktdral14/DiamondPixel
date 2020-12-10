@@ -40,6 +40,7 @@ body,
 }
 html::-webkit-scrollbar {
   background-color: #ffffff;
+  width: 13px;
 }
 html::-webkit-scrollbar-thumb {
   background: #00a8e8;
@@ -78,6 +79,7 @@ code {
   position: fixed;
   z-index: 200;
   width: 100%;
+  box-shadow: 0px 1px 7px #003459;
   height: 60px;
 }
 .link-custom {
@@ -215,6 +217,11 @@ code {
 }
 .card-body {
   background-color: #00a8e8;
+  color: #ccc;
+}
+.card-body-float {
+  padding: 15px;
+  background-color: #00a8e8;
   border-radius: 20px 20px 20px 20px;
   z-index: 100;
   position: absolute;
@@ -225,11 +232,12 @@ code {
   transform: translate(-100%);
 }
 .card-img-top {
-  /* position: relative; */
-  /* top: 30px; */
   border-radius: 20px 20px;
 }
-.card:hover > .card-body {
+.small {
+  border-radius: 20px 20px 0px 0px;
+}
+.card:hover > .card-body-float {
   visibility: visible;
   transform: translateX(10%);
 }
@@ -267,4 +275,68 @@ code {
 .img-antonio {
   width: 100%;
   height: 38vh;
+}
+.form-contacto {
+  background-color: #00a6e854;
+  border-radius: 16px;
+}
+
+.decoration-form {
+  background-color: #007ea7;
+  height: 2.4rem;
+  max-width: 18px;
+  margin-right: 10px;
+  border-radius: 0px 10px 10px 0px;
+}
+.decoration-info {
+  background-color: #007ea7;
+  height: 2.2rem;
+  max-width: 20px;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  background-color: #007ea7;
+  color: white;
+  border: none;
+  height: 200px;
+  max-height: 200px;
+  min-height: 100px;
+  transition: all 0.3s ease-in-out;
+}
+.form-group textarea:focus {
+  background-color: #003459;
+  color: #ffffff;
+  border: none;
+}
+.form-group input {
+  background-color: #007ea7;
+  color: #ffffff;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.form-group input:focus {
+  background-color: #003459;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+}
+
+.form-group input::placeholder {
+  color: #ffffff;
+}
+.form-group textarea::placeholder {
+  color: #ffffff;
+}
+
+.btn-enviar {
+  background-color: #00a8e8;
+  color: #00171F;
+  width: 120px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.btn-enviar:hover {
+  background-color: #003459;
+  color: #ffffff;
 }
