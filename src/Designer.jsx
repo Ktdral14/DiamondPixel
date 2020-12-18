@@ -1,11 +1,17 @@
 import React from 'react'
 import { NavbarPage } from './NavbarPage'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPen } from '@fortawesome/free-solid-svg-icons/faPen'
+import { faSquare } from '@fortawesome/free-solid-svg-icons/faSquare'
+import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle'
+import { faFillDrip } from '@fortawesome/free-solid-svg-icons/faFillDrip'
+import { faEraser } from '@fortawesome/free-solid-svg-icons/faEraser'
 
 export const Designer = () => {
     return (
         <>
             <NavbarPage inicio={false} />
-            <div id="desinger" className="container-fluid h-100 container">
+            <div id="desinger" className=" h-100 container-fluid">
                 <div className="row">
                     <div className="col-12 d-flex justify-content-center align-text-center">
                         <label htmlFor="" className="eslogan2">!Crea¡!Juega¡!Diseña¡</label>
@@ -23,11 +29,11 @@ export const Designer = () => {
                         <label className="datos3">Herramientas</label>
                             <div className="herramientas">
                             <ul>
-                                <li className="mb-3 mt-4"><span><i class="fas fa-pencil-alt"></i></span>Lapiz</li>
-                                <li className="mb-3"><span><i class="fas fa-square"></i></span>Cuadrado</li>
-                                <li className="mb-3"><span><i class="fas fa-circle"></i></span>Ovalo</li>
-                                <li className="mb-3"><span><i class="fas fa-fill-drip"></i></span>Rellenar</li>
-                                <li className="mb-3"><span><i class="fas fa-eraser"></i></span>Borrar</li>
+                                <li className="mb-3 mt-4"><span><FontAwesomeIcon className="" icon={faPen} />   &nbsp;&nbsp;           </span>Lapiz</li>
+                                <li className="mb-3"><span><FontAwesomeIcon className="" icon={faSquare} />    &nbsp;&nbsp;            </span>Cuadrado</li>
+                                <li className="mb-3"><span><FontAwesomeIcon className="" icon={faCircle} />        &nbsp;&nbsp;        </span>Ovalo</li>
+                                <li className="mb-3"><span><FontAwesomeIcon className="" icon={faFillDrip} />    &nbsp;&nbsp;          </span>Rellenar</li>
+                                <li className="mb-3"><span><FontAwesomeIcon className="" icon={faEraser} />     &nbsp;&nbsp;           </span>Borrar</li>
                             </ul>
                             </div>
                         </form>
