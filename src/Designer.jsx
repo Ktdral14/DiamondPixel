@@ -84,7 +84,7 @@ export const Designer = () => {
                         
                             <div className="col-11 p-0">
                                 <div className="form-group2">
-                                    <input type="text" className="form-control" placeholder="Correo electrónico"/>
+                                    <input type="text" className="form-control" placeholder="Telefono"/>
                                 </div>
                             </div>
                         </div>
