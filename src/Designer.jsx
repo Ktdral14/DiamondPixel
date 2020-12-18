@@ -11,7 +11,7 @@ export const Designer = () => {
     return (
         <>
             <NavbarPage inicio={false} />
-            <div id="desinger" className=" h-100 container-fluid">
+            <div id="desinger" className=" h-100 container-fluid padre">
                 <div className="row">
                     <div className="col-12 d-flex justify-content-center align-text-center">
                         <label htmlFor="" className="eslogan2">!Crea¡!Juega¡!Diseña¡</label>
