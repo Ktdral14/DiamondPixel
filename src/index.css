@@ -132,6 +132,13 @@ code {
   overflow: hidden;
   animation: typing 4s steps(40, end);
 }
+.eslogan2 {
+  font-family: "Lobster";
+  font-size: 4rem;
+  white-space: nowrap;
+  margin: 0 auto;
+  margin-top: -50px;
+}
 @keyframes typing {
   from {
     width: 0;
@@ -277,8 +284,17 @@ code {
   height: 38vh;
 }
 .form-contacto {
-  background-color: #00a6e854;
+  background-color: #00507054;
   border-radius: 16px;
+}
+.form-contacto2 {
+  background-color: #beebffd7;
+  border-radius: 16px;
+  padding: 5px;
+  width: 450px;
+  margin-top: -30px;
+  margin-left: 20px;
+  height: 400px;
 }
 
 .decoration-form {
@@ -315,6 +331,19 @@ code {
   border: none;
   transition: all 0.3s ease-in-out;
 }
+.form-group2 input {
+  
+  background-color: #7ed5f1;
+  color: #ffffff;
+  margin: -10px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.row {
+  margin-left: 30px;
+  margin-top: 50px;
+}
 .form-group input:focus {
   background-color: #003459;
   color: #ffffff;
@@ -339,4 +368,89 @@ code {
 .btn-enviar:hover {
   background-color: #003459;
   color: #ffffff;
+}
+.btn-enviar2 {
+  background-color: #00a8e8;
+  color: #00171F;
+  width: 150px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-left: -40px;
+}
+.btn-enviar2:hover {
+  background-color: #003459;
+  color: #ffffff;
+}
+
+.imagen {
+  margin-top: -50px;
+  margin-left: -80px;
+}
+
+.content {
+  margin-top: 100px;
+}
+
+.datos {
+  font-weight: bold;
+  color: #00171F;
+  font-size: 20px;
+}
+.datos2 {
+  font-weight: bold;
+  color: #00171F;
+  font-size: 20px;
+  margin-left: -176px;
+  margin-top: -30px;
+}
+.data {
+  margin-top: -90px;
+}
+
+.herramientas {
+  background-color: #004a63;
+  color: white;
+  width: 150px;
+  border-radius: 16px;
+  height: 220px;
+  margin-left: -105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.herramientas2 {
+  background-color: #004a63;
+  color: white;
+  width: 150px;
+  border-radius: 16px;
+  height: 120px;
+  margin-left: -160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formColores {
+  margin-top: 260px;
+}
+.herramientas ul {
+  list-style-type: none;
+  margin-left: -7px;
+  font-weight: bold;
+}
+.herramientas ul li:hover {
+  color: #00a8e8;
+  transition: 0.5s;
+}
+.columnaColores {
+  width: 10px;
+  margin-left: 100px;
+  margin-top: -110px;
+}
+
+.datos3 {
+  font-weight: bold;
+  color: #00171F;
+  font-size: 20px;
+  margin-left: -95px;
+  margin-top: -30px;
 }
