@@ -89,9 +89,6 @@ code {
   font-weight: 500;
   transition: all 0.3s ease 0s;
 }
-.link-custom:hover {
-  font-weight: bold;
-}
 .link-custom:active {
   color: #ffffff;
   font-weight: bold;
@@ -197,8 +194,8 @@ code {
   left: 0px;
   width: 0;
   height: 0;
-  border-left: 500px solid #003459;
-  border-top: 100px solid transparent;
+  border-left: 700px solid #00a8e8;
+  border-top: 90px solid transparent;
   border-bottom: 0px solid transparent;
 }
 .card {
@@ -296,7 +293,7 @@ code {
 }
 
 .form-group textarea {
-  background-color: #007ea7;
+  background-color: #00a8e8;
   color: white;
   border: none;
   height: 200px;
@@ -310,7 +307,7 @@ code {
   border: none;
 }
 .form-group input {
-  background-color: #007ea7;
+  background-color: #00a8e8;
   color: #ffffff;
   border: none;
   transition: all 0.3s ease-in-out;
@@ -331,7 +328,7 @@ code {
 
 .btn-enviar {
   background-color: #00a8e8;
-  color: #00171F;
+  color: #ffffff;
   width: 120px;
   font-weight: bold;
   transition: all 0.3s ease;
