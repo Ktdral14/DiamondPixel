@@ -6,6 +6,7 @@ import { faSquare } from '@fortawesome/free-solid-svg-icons/faSquare'
 import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle'
 import { faFillDrip } from '@fortawesome/free-solid-svg-icons/faFillDrip'
 import { faEraser } from '@fortawesome/free-solid-svg-icons/faEraser'
+import { faMouse } from '@fortawesome/free-solid-svg-icons/faMouse'
 
 export const Designer = () => {
     return (
@@ -13,49 +14,49 @@ export const Designer = () => {
             <NavbarPage inicio={false} />
             <div id="desinger" className=" h-100 container-fluid padre">
                 <div className="row">
-                    <div className="col-12 d-flex justify-content-center align-text-center">
-                        <label htmlFor="" className="eslogan2">!Crea¡!Juega¡!Diseña¡</label>
+                    <div className="col-lg-12 col-md-12 col-sm-4 d-flex justify-content-center align-text-left">
+                        <label htmlFor="" className="eslogan2">¡Crea!¡Juega!¡Diseña!</label>
                     </div>
-                    
                 </div>
-                <div className="row content">
-                    <div className="col-lg-5 col-md-12 col-sm-6 d-flex justify-content-center imagen">
-                        <img src="https://thumbs.dreamstime.com/b/cuadr%C3%ADcula-de-papel-cuadrada-sobre-un-patr%C3%B3n-transparente-fondo-hoja-mil%C3%ADmetro-168063673.jpg" width="460" height="450"></img>
+                <div className="row">
+                    <div className="col-lg-4 col-md-12 col-sm-12 cuadricula">
+                        <img src="https://3.bp.blogspot.com/-D2aGdQKxd28/Wg58lUYNuKI/AAAAAAAAUSQ/XdFg_RcGTY4k34SwJ3poNOzTb6iU-ymJACLcBGAs/s1600/8x8.jpg" alt=""></img>
                     </div>
-                    <div className="col-2  d-flex justify-content-center alig-items-center align-text-center columnaColores">
-                        
+
+
+                    <div className="col-lg-3 col-md-2 col-sm-2 cuadro">
                         <div className="row">
-                        <form className="">
-                        <label className="datos3">Herramientas</label>
-                            <div className="herramientas">
-                            <ul>
-                                <li className="mb-3 mt-4"><span><FontAwesomeIcon className="" icon={faPen} />   &nbsp;&nbsp;           </span>Lapiz</li>
-                                <li className="mb-3"><span><FontAwesomeIcon className="" icon={faSquare} />    &nbsp;&nbsp;            </span>Cuadrado</li>
-                                <li className="mb-3"><span><FontAwesomeIcon className="" icon={faCircle} />        &nbsp;&nbsp;        </span>Ovalo</li>
-                                <li className="mb-3"><span><FontAwesomeIcon className="" icon={faFillDrip} />    &nbsp;&nbsp;          </span>Rellenar</li>
-                                <li className="mb-3"><span><FontAwesomeIcon className="" icon={faEraser} />     &nbsp;&nbsp;           </span>Borrar</li>
-                            </ul>
+                            <label htmlFor="" className="texto">Herramientas</label>
+                            <div>
+                                <div class="card card1">
+                                    <div class="container">
+                                        <i><FontAwesomeIcon icon={faEraser}></FontAwesomeIcon></i><h6><b>Borrar</b></h6>
+                                        <i><FontAwesomeIcon icon={faPen}></FontAwesomeIcon></i><h6><b>Dibujar</b></h6>
+                                    </div>
+                                </div>
                             </div>
-                        </form>
                         </div>
-                        
+                        <br/>
                         <div className="row">
-                        <form className="formColores">
-                        <label className="datos2">Colores disponibles</label>
-                            <div className="herramientas2">
-                                <img src="https://miro.medium.com/max/670/1*f5oJNohkk3B1B8WQsAXOtQ.png" alt="" width="120px" height="80"/>
+                        <label htmlFor="" className="texto">Colores</label>
+                            <div className="">
+                                <div class="card card1">
+                                    <div class="container">
+                                        aqui va la paleta
+                                    </div>
+                                </div>
                             </div>
-                        </form>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-4 col-sm-6">
-                        
-                    <form className="form-contacto2 align-items-center">
-                        <div className="data">
-                        <div className="row d-flex justify-content-center mr-3">
+
+
+                    <div className="col-lg-5 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
+                    <form className="form-contacto2">
+                    <div className="info">
+                        <div className="row d-flex justify-content-center">
                         <label className="align-text-center datos">Datos de entrega</label>
                         </div>
-                    
+                   
                         <div className="row">
                         
                             <div className="col-11 p-0">
@@ -98,10 +99,13 @@ export const Designer = () => {
                         </div>
                         </div>
                         </div>
+                        
                     </form> 
                     </div>
                 </div>
-            </div>
+                
+                </div>
+                
         </>
     )
 }
