@@ -7,13 +7,40 @@ import { useForm } from 'react-hook-form'
 import ReCAPTCHA from 'react-google-recaptcha'
 import logo from './assets/logo-diamond.svg'
 import { colors } from '../src/assets/data/colors'
+import Swal from 'sweetalert2'
 
 export const Designer = () => {
     //form
     const [validate, setValidate] = useState(false);
-    const { register, handleSubmit, errors} = useForm();
+    const { register, handleSubmit, errors } = useForm();
     const onSubmit = (data) => {
-            console.log(data);
+        const date = new Date();
+        html2canvas(document.getElementById('table'), { backgroundColor: null, scrollY: - window.scrollY }).then(canvas => {
+            canvas.toBlob((blob) => {
+
+                let formData = new FormData();
+                for (const key in data) {
+                    formData.append(key, data[key]);
+                }
+                const nombreDiseno = `lienzo-${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}-${date.getSeconds()}.png`;
+                formData.append('diseno', blob, nombreDiseno);
+                fetch('http://localhost/diamond-pixel-api/public/enviar-diseno', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            Swal.fire({
+                                title: '¡Éxito!',
+                                text: 'Se ha registrado tu pedido.',
+                                icon: 'success',
+                                confirmButtonText: 'Cool'
+                            });
+                        }
+                    })
+                    .catch(err => console.log(err));
+            });
+        });
     }
     const handleReCaptchaChange = (value) => {
         console.log(value);
@@ -23,7 +50,7 @@ export const Designer = () => {
         on: false,
         color: '#ffffff'
     }
-    const initialCells = Array.from({length: 30*30}, () => offCell);
+    const initialCells = Array.from({ length: 30 * 30 }, () => offCell);
     const [cells, setCells] = useState(initialCells);
     const [help, setHelp] = useState(false);
     const [colorActual, setColorActual] = useState('#ffffff');
@@ -36,29 +63,29 @@ export const Designer = () => {
         if (e.buttons === 1 || e.buttons === 2) {
             setCells(
                 cells.map((cell, cellIndex) => {
-                if (cellIndex === index) {
-                    if (e.buttons === 1) {
-                        return {
-                            on: true,
-                            color: colorActual
+                    if (cellIndex === index) {
+                        if (e.buttons === 1) {
+                            return {
+                                on: true,
+                                color: colorActual
+                            }
                         }
+                        return offCell;
                     }
-                    return offCell;
-                }
-                return cell;
-            }));
+                    return cell;
+                }));
         }
     };
     const saveCanvas = () => {
         const date = new Date();
-        html2canvas(document.getElementById('table'), {backgroundColor: null, scrollY: - window.scrollY}).then(canvas => {
+        html2canvas(document.getElementById('table'), { backgroundColor: null, scrollY: - window.scrollY }).then(canvas => {
             const link = document.createElement("a");
-                document.body.appendChild(link);
-                link.download = `lienzo-${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}-${date.getSeconds()}.png`;
-                link.href = canvas.toDataURL("image/png");
-                link.target = '_blank';
-                link.click();
-                document.body.removeChild(link);
+            document.body.appendChild(link);
+            link.download = `lienzo-${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}-${date.getSeconds()}.png`;
+            link.href = canvas.toDataURL("image/png");
+            link.target = '_blank';
+            link.click();
+            document.body.removeChild(link);
         })
     }
     const closeHelp = () => {
@@ -74,7 +101,7 @@ export const Designer = () => {
                         <p>
                             Esta pagina actualmente solo es soportada desde computadora, aun no hay
                             soporte para dispositivos moviles.
-                            <br/>
+                            <br />
                             <strong>Instrucciones de uso:</strong>
                         </p>
                         <ul>
@@ -95,7 +122,7 @@ export const Designer = () => {
                                         <h3 className="font-white">Color actual:</h3>
                                         <div className="row">
                                             <div className="col-6">
-                                                <div className="current-color" style={{background: colorActual}}></div>
+                                                <div className="current-color" style={{ background: colorActual }}></div>
                                             </div>
                                             <div className="col-6">
                                                 <button type="button" onClick={saveCanvas} className="btn btn-enviar mb-3 float-right">Descargar</button>
@@ -104,18 +131,18 @@ export const Designer = () => {
                                     </div>
                                 </div>
                                 <div id="table" className="grid">
-                                        { 
+                                    {
                                         cells.map((cell, index) =>
-                                            <div 
-                                                style={{background: cell.on ? cell.color: '#ffffff'}} 
-                                                onClick={updateCell(index)} key={index} 
-                                                onMouseDown = {updateCell(index)}
-                                                onMouseOver = {updateCell(index)}
-                                                onContextMenu = {(e) => e.preventDefault()}
+                                            <div
+                                                style={{ background: cell.on ? cell.color : '#ffffff' }}
+                                                onClick={updateCell(index)} key={index}
+                                                onMouseDown={updateCell(index)}
+                                                onMouseOver={updateCell(index)}
+                                                onContextMenu={(e) => e.preventDefault()}
                                                 className="cell">
                                             </div>
-                                        ) 
-                                        }
+                                        )
+                                    }
                                 </div>
                             </div>
                             <div className="col-12 col-md-3 text-center">
@@ -136,14 +163,14 @@ export const Designer = () => {
                                     <div className="col-12">
                                         <label className="font-white">Colores disponibles</label>
                                         <div className="grid-colores m-auto">
-                                            { 
-                                                colors.map((value, key) => 
-                                                    <div className="cell-color" 
-                                                    key={key}
-                                                    style={{background : value, outline: '1px solid ' + value}}
-                                                    onClick={() => onChangeColor(value)}>
+                                            {
+                                                colors.map((value, key) =>
+                                                    <div className="cell-color"
+                                                        key={key}
+                                                        style={{ background: value, outline: '1px solid ' + value }}
+                                                        onClick={() => onChangeColor(value)}>
                                                     </div>
-                                                ) 
+                                                )
                                             }
                                         </div>
                                     </div>
@@ -154,7 +181,7 @@ export const Designer = () => {
                     <div className="col-12 pl-1 pl-md-5 mb-2 mt-2">
                         <div className="row pl-1">
                             <div className="col-12">
-                                <label className="eslogan2 text-center text-md-left">2. Envianos tu diseño</label>    
+                                <label className="eslogan2 text-center text-md-left">2. Envianos tu diseño</label>
                             </div>
                             <div className="col-12 col-md-6 form-contacto mb-3 bg-white">
                                 <div className="col-12">
@@ -166,8 +193,8 @@ export const Designer = () => {
                                             <div className="col-1 p-0 decoration-form"></div>
                                             <div className="col-11 p-0">
                                                 <div className="form-group">
-                                                    <input name="nombre" ref={register({required: true})} type="text" className="form-control" placeholder="Nombre completo"/>
-                                                    {errors.nombre && <small style={{color:'red'}} className="form-text">Este campo es requerido</small>}
+                                                    <input name="nombre" ref={register({ required: true })} type="text" className="form-control" placeholder="Nombre completo" />
+                                                    {errors.nombre && <small style={{ color: 'red' }} className="form-text">Este campo es requerido</small>}
                                                 </div>
                                             </div>
                                         </div>
@@ -175,8 +202,8 @@ export const Designer = () => {
                                             <div className="col-1 p-0 decoration-form"></div>
                                             <div className="col-11 p-0">
                                                 <div className="form-group">
-                                                    <input name="correo" ref={register({required: true})} type="text" className="form-control" placeholder="Correo electrónico"/>
-                                                    {errors.correo && <small style={{color:'red'}} className="form-text">Este campo es requerido</small>}
+                                                    <input name="correo" ref={register({ required: true })} type="text" className="form-control" placeholder="Correo electrónico" />
+                                                    {errors.correo && <small style={{ color: 'red' }} className="form-text">Este campo es requerido</small>}
                                                 </div>
                                             </div>
                                         </div>
@@ -184,8 +211,8 @@ export const Designer = () => {
                                             <div className="col-1 p-0 decoration-form"></div>
                                             <div className="col-11 p-0">
                                                 <div className="form-group">
-                                                    <input name="direccion" ref={register({required: true})} type="text" className="form-control" placeholder="Dirección"/>
-                                                    {errors.direccion && <small style={{color:'red'}} className="form-text">Este campo es requerido</small>}
+                                                    <input name="direccion" ref={register({ required: true })} type="text" className="form-control" placeholder="Dirección" />
+                                                    {errors.direccion && <small style={{ color: 'red' }} className="form-text">Este campo es requerido</small>}
                                                 </div>
                                             </div>
                                         </div>
@@ -193,13 +220,13 @@ export const Designer = () => {
                                             <div className="col-1 p-0 decoration-form"></div>
                                             <div className="col-11 p-0">
                                                 <div className="form-group">
-                                                    <input name="telefono" ref={register({required: true})} type="text" className="form-control" placeholder="Telefono"/>
-                                                    {errors.telefono && <small style={{color:'red'}} className="form-text">Este campo es requerido</small>}
+                                                    <input name="telefono" ref={register({ required: true })} type="text" className="form-control" placeholder="Telefono" />
+                                                    {errors.telefono && <small style={{ color: 'red' }} className="form-text">Este campo es requerido</small>}
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="text-center">
-                                            <ReCAPTCHA 
+                                            <ReCAPTCHA
                                                 className="re-captcha"
                                                 sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                                                 onChange={handleReCaptchaChange}

@@ -1,12 +1,32 @@
 import React, { useState } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 import { useForm } from 'react-hook-form'
+import Swal from 'sweetalert2'
 
 export const Contact = () => {
     const [validate, setValidate] = useState(false);
-    const { register, handleSubmit, errors} = useForm();
+    const { register, handleSubmit, errors } = useForm();
     const onSubmit = (data) => {
-            console.log(data);
+        console.log(data);
+        const formData = new FormData();
+        formData.append('nombre', data.nombre);
+        formData.append('correo', data.correo);
+        formData.append('mensaje', data.mensaje);
+        fetch('http://localhost/diamond-pixel-api/public/contacto', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                if (response.ok) {
+                    Swal.fire({
+                        title: '¡Éxito!',
+                        text: 'Se ha registrado tu pedido.',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    });
+                }
+            })
+            .catch(err => console.log(err));
     }
     const handleReCaptchaChange = (value) => {
         console.log(value);
@@ -56,8 +76,8 @@ export const Contact = () => {
                             <div className="col-1 p-0 decoration-form"></div>
                             <div className="col-11 p-0">
                                 <div className="form-group">
-                                    <input name="nombre" ref={register({required: true})} type="text" className="form-control" placeholder="Nombre completo"/>
-                                    {errors.nombre && <small style={{color:'red'}} className="form-text">Este campo es requerido</small>}
+                                    <input name="nombre" ref={register({ required: true })} type="text" className="form-control" placeholder="Nombre completo" />
+                                    {errors.nombre && <small style={{ color: 'red' }} className="form-text">Este campo es requerido</small>}
                                 </div>
                             </div>
                         </div>
@@ -65,8 +85,8 @@ export const Contact = () => {
                             <div className="col-1 p-0 decoration-form"></div>
                             <div className="col-11 p-0">
                                 <div className="form-group">
-                                    <input name="correo" ref={register({required: true})} type="text" className="form-control" placeholder="Correo"/>
-                                    {errors.correo && <small style={{color:'red'}} className="form-text">Este campo es requerido</small>}
+                                    <input name="correo" ref={register({ required: true })} type="text" className="form-control" placeholder="Correo" />
+                                    {errors.correo && <small style={{ color: 'red' }} className="form-text">Este campo es requerido</small>}
                                 </div>
                             </div>
                         </div>
@@ -74,13 +94,13 @@ export const Contact = () => {
                             <div className="col-1 p-0 decoration-form"></div>
                             <div className="col-11 p-0">
                                 <div className="form-group">
-                                    <textarea name="mensaje" ref={register({required: true})} className="form-control" placeholder="Mensaje..."/>
-                                    {errors.mensaje && <small style={{color:'red'}} className="form-text">Este campo es requerido</small>}
+                                    <textarea name="mensaje" ref={register({ required: true })} className="form-control" placeholder="Mensaje..." />
+                                    {errors.mensaje && <small style={{ color: 'red' }} className="form-text">Este campo es requerido</small>}
                                 </div>
                             </div>
                         </div>
                         <div className="text-center">
-                            <ReCAPTCHA 
+                            <ReCAPTCHA
                                 className="re-captcha"
                                 sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                                 onChange={handleReCaptchaChange}
