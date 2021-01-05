@@ -99,8 +99,8 @@ export const Designer = () => {
                     <div className={help ? "col-11 helper d-none p-3" : "col-11 helper p-3"}>
                         <button className="btn" onClick={closeHelp}> <FontAwesomeIcon icon={faTimes} /> </button>
                         <p>
-                            Esta página actualmente sólo es soportada desde computadora, aún no hay
-                            soporte para dispositivos móviles.
+                            Esta página actualmente solo es soportada desde computadora, aun no hay
+                            soporte para dispositivos moviles.
                             <br />
                             <strong>Instrucciones de uso:</strong>
                         </p>
