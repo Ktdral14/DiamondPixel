@@ -6,7 +6,7 @@ export const About = () => {
             <div className="row align-items-start justify-content-between">
                 <div className="col-sm-12 col-md-6 col-lg-7 col-xl-6 mx-auto">
                     <h2 className="text-left">¿Quiénes somos?</h2>
-                    <p className="mt-4">
+                    <p className="mt-4 text-justify">
                         Somos Diamond Pixel, una empresa especializada en el diseño y creación
                         de decoraciones o accesorios con hama beads, siempre pensando en el
                         bienestar emocional y las preferencias de nuestros clientes brindándoles
