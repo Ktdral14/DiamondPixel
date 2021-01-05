@@ -9,7 +9,7 @@ export const Team = () => {
                 <div className="col-md-5 col-lg-5 col-xl-4">
                     <div className="row mb-2 justify-content-center">
                         <div className="item col-8">
-                            <img className="rounded-circle img-fluid" src="http://diamond-pixel.mante.hosting.acm.org/recursos/Integrantes/Daniela.jpeg" alt="" />
+                            <img className="rounded-circle img-fluid" src="http://diamondpixel.tecdevsmx.com/resourses/Daniela.webp" alt="" />
                             <img className="diamond-pixel-badge rounded-circle img-fluid" src={logo} alt="" />
                         </div>
                     </div>
@@ -23,7 +23,7 @@ export const Team = () => {
                 <div className="col-md-5 col-lg-5 col-xl-4">
                     <div className="row mb-2 justify-content-center">
                         <div className="item col-8">
-                            <img className="rounded-circle img-fluid" src="http://diamond-pixel.mante.hosting.acm.org/recursos/Integrantes/Valeria.jpeg" alt="" />
+                            <img className="rounded-circle img-fluid" src="http://diamondpixel.tecdevsmx.com/resourses/Valeria.webp" alt="" />
                             <img className="diamond-pixel-badge rounded-circle img-fluid" src={logo} alt="" />
                         </div>
                     </div>
@@ -39,7 +39,7 @@ export const Team = () => {
                 <div className="col-md-5 col-lg-5 col-xl-4">
                     <div className="row mb-2 justify-content-center">
                         <div className="item col-8">
-                            <img className="rounded-circle img-antonio" src="http://diamond-pixel.mante.hosting.acm.org/recursos/Integrantes/Antonio.jpg" alt="" />
+                            <img className="rounded-circle img-antonio" src="http://diamondpixel.tecdevsmx.com/resourses/Antonio.webp" alt="" />
                             <img className="diamond-pixel-badge rounded-circle img-fluid" src={logo} alt="" />
                         </div>
                     </div>
@@ -53,7 +53,7 @@ export const Team = () => {
                 <div className="col-md-5 col-lg-5 col-xl-4 justify-content-center">
                     <div className="row mb-2 justify-content-center">
                         <div className="item col-8">
-                            <img className="rounded-circle img-fluid" src="http://diamond-pixel.mante.hosting.acm.org/recursos/Integrantes/Joel.jpg" alt="" />
+                            <img className="rounded-circle img-fluid" src="http://diamondpixel.tecdevsmx.com/resourses/Joel.webp" alt="" />
                             <img className="diamond-pixel-badge rounded-circle img-fluid" src={logo} alt="" />
                         </div>
                     </div>
