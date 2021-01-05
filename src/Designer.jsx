@@ -99,15 +99,15 @@ export const Designer = () => {
                     <div className={help ? "col-11 helper d-none p-3" : "col-11 helper p-3"}>
                         <button className="btn" onClick={closeHelp}> <FontAwesomeIcon icon={faTimes} /> </button>
                         <p>
-                            Esta pagina actualmente solo es soportada desde computadora, aun no hay
-                            soporte para dispositivos moviles.
+                            Esta página actualmente sólo es soportada desde computadora, aún no hay
+                            soporte para dispositivos móviles.
                             <br />
                             <strong>Instrucciones de uso:</strong>
                         </p>
                         <ul>
                             <li>Seleccionar un color de la lista de colores disponibles</li>
                             <li>Traza tu diseño perzonalizado, puedes utilizar todos los colores disponibles</li>
-                            <li>Da click al boton de descargar para guardar una copia de tu diseño</li>
+                            <li>Da click al botón de descargar para guardar una copia de tu diseño</li>
                             <li>Rellena el formulario con los datos del envío</li>
                         </ul>
                     </div>
@@ -181,7 +181,7 @@ export const Designer = () => {
                     <div className="col-12 pl-1 pl-md-5 mb-2 mt-2">
                         <div className="row pl-1">
                             <div className="col-12">
-                                <label className="eslogan2 text-center text-md-left">2. Envianos tu diseño</label>
+                                <label className="eslogan2 text-center text-md-left">2. Envíanos tu diseño</label>
                             </div>
                             <div className="col-12 col-md-6 form-contacto mb-3 bg-white">
                                 <div className="col-12">
@@ -220,7 +220,7 @@ export const Designer = () => {
                                             <div className="col-1 p-0 decoration-form"></div>
                                             <div className="col-11 p-0">
                                                 <div className="form-group">
-                                                    <input name="telefono" ref={register({ required: true })} type="text" className="form-control" placeholder="Telefono" />
+                                                    <input name="telefono" ref={register({ required: true })} type="text" className="form-control" placeholder="Teléfono" />
                                                     {errors.telefono && <small style={{ color: 'red' }} className="form-text">Este campo es requerido</small>}
                                                 </div>
                                             </div>
@@ -243,9 +243,9 @@ export const Designer = () => {
                                     <h4>Puntos a considerar:</h4>
                                     <ul>
                                         <li>Los datos que se escriban deben de ser completamente reales.</li>
-                                        <li>Es necesario completar el capcha para poder dar click en el boton de enviar.</li>
+                                        <li>Es necesario completar el capcha para poder dar click en el botón de enviar.</li>
                                         <li>
-                                            Una vez la información es enviada nuestro equipo de trabajo se pondra
+                                            Una vez la información es enviada nuestro equipo de trabajo se pondrá
                                             en contacto contigo para proseguir con la entrega y cotización.
                                         </li>
                                     </ul>
