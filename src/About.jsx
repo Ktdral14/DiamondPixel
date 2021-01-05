@@ -14,7 +14,7 @@ export const About = () => {
                     </p>
                 </div>
                 <div className="col-sm-12 col-md-5 col-lg-5 col-xl-4">
-                    <img className="img-fluid" src="http://diamond-pixel.mante.hosting.acm.org/recursos/diamond-pixel-team.jpeg" alt="" />
+                    <img className="img-fluid rounded" src="http://diamondpixel.tecdevsmx.com/resourses/Integrantes.webp" alt="team" />
                 </div>
             </div>
         </div>

@@ -9,6 +9,8 @@ import { Team } from './Team'
 import { Products } from './Products'
 import { Principal } from './Principal'
 import { Contact } from './Contact'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 
 export const Main = () => {
     return (
@@ -95,9 +97,20 @@ export const Main = () => {
                     </div>
                 </div>
             </div>
-            <div className="footer container-fluid">
-                <div className="row">
-                    <h1>AQUI VA EL FOOTER</h1>
+            <div className="footer h-25 container-fluid mt-3 mt-md-0">
+                <div className="row h-100 justify-content-center align-content-center" style={{background: 'black'}}>
+                    <div className="col-12">
+                        <div className="text-center">
+                            <h3 style={{color: 'white'}}>&copy; 2020 TecDevs</h3>
+                            <span style={{color: 'white'}}>Todos los derechos reservados</span>
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="col-12 text-center mt-2">
+                            <a style={{textDecoration: 'none'}} className="ml-2" href="https://github.com/TecDevs" target="_blank" rel="noreferrer"><FontAwesomeIcon className="icon-white" icon={['fab', 'github']} size="2x"/> </a>
+                            <a style={{textDecoration: 'none'}} className="ml-2" href="https://tecdevsmx.com/" target="_blank" rel="noreferrer"><FontAwesomeIcon className="icon-white" icon={faGlobe} size="2x"/> </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

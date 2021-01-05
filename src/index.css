@@ -273,9 +273,11 @@ code {
   right: 20px;
   bottom: 0px;
   background: white;
-  border-radius: 30px 30px 30px 30px;
   padding: 5px 10px;
-  box-shadow: 1px 1px 1px rgb(110, 110, 110);
+  border-radius: 150px;
+background: #ffffff;
+box-shadow:  7px 7px 14px #bababa,
+              -2px -2px 2px #ffffff;
   width: 20%;
   height: 20%;
 }

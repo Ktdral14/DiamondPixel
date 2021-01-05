@@ -34,7 +34,7 @@ export const Contact = () => {
     }
     return (
         <div className="col-12">
-            <div className="row">
+            <div className="row justify-content-center">
                 <div className="col-12 col-md-6">
                     <div className="row pl-4">
                         <div className="col-12">
@@ -70,7 +70,7 @@ export const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-12 col-md-6 form-contacto mt-3 mt-md-0 ml-2 mr-2 m-md-0">
+                <div className="col-10 col-md-6 form-contacto mt-3 mt-md-0 ml-2 mr-2 m-md-0">
                     <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
                         <div className="row">
                             <div className="col-1 p-0 decoration-form"></div>

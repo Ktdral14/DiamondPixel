@@ -4,7 +4,7 @@ import { products } from './assets/data/products'
 export const Products = () => {
     return (
         <div className="col-12">
-            <div className="card-columns mt-3 p-5">
+            <div className="card-columns p-5">
                 {
                     products.map((data, key) => {
                         return (
