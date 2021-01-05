@@ -99,7 +99,7 @@ export const Designer = () => {
                     <div className={help ? "col-11 helper d-none p-3" : "col-11 helper p-3"}>
                         <button className="btn" onClick={closeHelp}> <FontAwesomeIcon icon={faTimes} /> </button>
                         <p>
-                            Esta pagina actualmente solo es soportada desde computadora, aun no hay
+                            Esta página actualmente solo es soportada desde computadora, aun no hay
                             soporte para dispositivos moviles.
                             <br />
                             <strong>Instrucciones de uso:</strong>
@@ -181,7 +181,7 @@ export const Designer = () => {
                     <div className="col-12 pl-1 pl-md-5 mb-2 mt-2">
                         <div className="row pl-1">
                             <div className="col-12">
-                                <label className="eslogan2 text-center text-md-left">2. Envianos tu diseño</label>
+                                <label className="eslogan2 text-center text-md-left">2. Envíanos tu diseño</label>
                             </div>
                             <div className="col-12 col-md-6 form-contacto mb-3 bg-white">
                                 <div className="col-12">
@@ -245,7 +245,7 @@ export const Designer = () => {
                                         <li>Los datos que se escriban deben de ser completamente reales.</li>
                                         <li>Es necesario completar el capcha para poder dar click en el boton de enviar.</li>
                                         <li>
-                                            Una vez la información es enviada nuestro equipo de trabajo se pondra
+                                            Una vez la información es enviada nuestro equipo de trabajo se pondrá
                                             en contacto contigo para proseguir con la entrega y cotización.
                                         </li>
                                     </ul>

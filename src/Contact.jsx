@@ -38,7 +38,7 @@ export const Contact = () => {
                 <div className="col-12 col-md-6">
                     <div className="row pl-4">
                         <div className="col-12">
-                            <h3>Envianos un comentario</h3>
+                            <h3>Envíanos un comentario</h3>
                         </div>
                         <div className="col-12">
                             <h6>Si quieres saber acerca de alguno de nuestros productos
@@ -56,7 +56,7 @@ export const Contact = () => {
                             <div className="row align-items-center">
                                 <div className="col-1 p-0 ml-3 decoration-info"></div>
                                 <div className="col-11 p-0 pl-2">
-                                    <h6><strong>Correo electronico:</strong> diamondpixelmante@gmail.com</h6>
+                                    <h6><strong>Correo electrónico:</strong> diamondpixelmante@gmail.com</h6>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@ export const Contact = () => {
                             <div className="row align-items-center">
                                 <div className="col-1 p-0 ml-3 decoration-info"></div>
                                 <div className="col-11 p-0 pl-2">
-                                    <h6><strong>Télefono:</strong> 831-158-2129</h6>
+                                    <h6><strong>Teléfono:</strong> 831-158-2129</h6>
                                 </div>
                             </div>
                         </div>
