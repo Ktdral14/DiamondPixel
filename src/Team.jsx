@@ -39,7 +39,7 @@ export const Team = () => {
                 <div className="col-md-5 col-lg-5 col-xl-4">
                     <div className="row mb-2 justify-content-center">
                         <div className="item col-8">
-                            <img className="rounded-circle img-antonio" src="http://diamondpixel.tecdevsmx.com/resourses/Antonio.webp" alt="" />
+                            <img className="rounded-circle img-fluid" src="http://diamondpixel.tecdevsmx.com/resourses/Antonio.webp" alt="" />
                             <img className="diamond-pixel-badge rounded-circle img-fluid" src={logo} alt="" />
                         </div>
                     </div>
