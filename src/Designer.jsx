@@ -114,11 +114,11 @@ export const Designer = () => {
                     <div className="col-12 pl-1 pl-md-5">
                         <label className="eslogan2">1. Crea tu diseño</label>
                     </div>
-                    <div className="col-12">
+                    <div className="col-11">
                         <div className="row justify-content-center align-content-center">
                             <div className="col-12 col-md-8">
                                 <div className="row justify-content-between align-items-center">
-                                    <div className="col-12 mb-2">
+                                    <div className="col-11 mb-2">
                                         <h3 className="font-white">Color actual:</h3>
                                         <div className="row">
                                             <div className="col-6">
@@ -151,10 +151,10 @@ export const Designer = () => {
                                         <label className="font-white">Herramientas</label>
                                         <div className="herramientas m-auto">
                                             <div className="row h-100 justify-content-center align-content-center">
-                                                <div className="col-12 mb-3">
+                                                <div className="col-12 mb-3 mt-2">
                                                     <span className="text-bold"><FontAwesomeIcon className="mr-2" icon={faPen} /> Click Izq</span>
                                                 </div>
-                                                <div className="col-12">
+                                                <div className="col-12 mb-2">
                                                     <span className="text-bold"><FontAwesomeIcon className="mr-2" icon={faEraser} /> Click Der</span>
                                                 </div>
                                             </div>

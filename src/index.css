@@ -364,7 +364,6 @@ box-shadow:  7px 7px 14px #bababa,
 .herramientas {
   background-color: white;
   color: #004a63;
-  height: 100px;
   width: 50%;
   border-radius: 10px;
 }
@@ -376,11 +375,12 @@ box-shadow:  7px 7px 14px #bababa,
 /* Grid */
 .grid {
   display: grid;
+  background: gray;
   grid-template-rows: repeat(30, 1fr);
   grid-template-columns: repeat(30, 1fr);
-  width: 100%;
-  height: 42vw;
-  outline: 2px dashed white;
+  width: 90%;
+  height: 45vw;
+  outline: 1px solid white;
 }
 .grid-colores {
   display: grid;
@@ -391,9 +391,10 @@ box-shadow:  7px 7px 14px #bababa,
   outline: 2px dashed white;
 }
 .cell {
-  outline: 1px solid gray;
   background: white;
   cursor: pointer;
+  margin: 0px;
+  border-radius: 50%;
   transition: all 0.2s ease 0s;
 }
 .cell-color {
