@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ReCAPTCHA from 'react-google-recaptcha'
+import { useForm } from 'react-hook-form'
 
 export const Contact = () => {
+    const [validate, setValidate] = useState(false);
+    const { register, handleSubmit, errors} = useForm();
+    const onSubmit = (data) => {
+            console.log(data);
+    }
+    const handleReCaptchaChange = (value) => {
+        console.log(value);
+        setValidate(true);
+    }
     return (
         <div className="col-12">
             <div className="row">
@@ -40,12 +51,13 @@ export const Contact = () => {
                     </div>
                 </div>
                 <div className="col-12 col-md-6 form-contacto mt-3 mt-md-0 ml-2 mr-2 m-md-0">
-                    <form className="mt-5">
+                    <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
                         <div className="row">
                             <div className="col-1 p-0 decoration-form"></div>
                             <div className="col-11 p-0">
                                 <div className="form-group">
-                                    <input type="text" className="form-control" placeholder="Nombre completo"/>
+                                    <input name="nombre" ref={register({required: true})} type="text" className="form-control" placeholder="Nombre completo"/>
+                                    {errors.nombre && <small style={{color:'red'}} className="form-text">Este campo es requerido</small>}
                                 </div>
                             </div>
                         </div>
@@ -53,7 +65,8 @@ export const Contact = () => {
                             <div className="col-1 p-0 decoration-form"></div>
                             <div className="col-11 p-0">
                                 <div className="form-group">
-                                    <input type="text" className="form-control" placeholder="Correo"/>
+                                    <input name="correo" ref={register({required: true})} type="text" className="form-control" placeholder="Correo"/>
+                                    {errors.correo && <small style={{color:'red'}} className="form-text">Este campo es requerido</small>}
                                 </div>
                             </div>
                         </div>
@@ -61,12 +74,20 @@ export const Contact = () => {
                             <div className="col-1 p-0 decoration-form"></div>
                             <div className="col-11 p-0">
                                 <div className="form-group">
-                                    <textarea className="form-control" placeholder="Mensaje..."/>
+                                    <textarea name="mensaje" ref={register({required: true})} className="form-control" placeholder="Mensaje..."/>
+                                    {errors.mensaje && <small style={{color:'red'}} className="form-text">Este campo es requerido</small>}
                                 </div>
                             </div>
                         </div>
                         <div className="text-center">
-                            <button className="btn btn-enviar mb-3">Enviar</button>
+                            <ReCAPTCHA 
+                                className="re-captcha"
+                                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                                onChange={handleReCaptchaChange}
+                            />
+                        </div>
+                        <div className="text-center">
+                            <button disabled={!validate} type="submit" className="btn btn-enviar mb-3">Enviar</button>
                         </div>
                     </form>
                 </div>

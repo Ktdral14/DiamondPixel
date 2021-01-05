@@ -86,11 +86,10 @@ code {
   margin-right: 15px;
   font-size: 16px;
   color: white;
-  font-weight: 500;
+  font-weight: 400;
   transition: all 0.3s ease 0s;
 }
-.link-custom:active {
-  color: #ffffff;
+.active {
   font-weight: bold;
 }
 .btn-custom {
@@ -131,11 +130,14 @@ code {
 }
 .eslogan2 {
   font-family: "Lobster";
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: #ffffff;
   white-space: nowrap;
-  margin: 0 auto;
-  margin-top: -50px;
+}
+.eslogan-black {
+  font-family: "Lobster";
+  font-size: 3rem;
+  color: #002531;
 }
 @keyframes typing {
   from {
@@ -285,16 +287,6 @@ code {
   background-color: #00507054;
   border-radius: 16px;
 }
-.form-contacto2 {
-  background-color: #f9fdfff1;
-  border-radius: 16px;
-  padding: 5px;
-  width: 450px;
-  margin-top: -30px;
-  margin-left: 20px;
-  height: 400px;
-}
-
 .decoration-form {
   background-color: #007ea7;
   height: 2.4rem;
@@ -329,19 +321,7 @@ code {
   border: none;
   transition: all 0.3s ease-in-out;
 }
-.form-group2 input {
-  
-  background-color: #7ed5f1;
-  color: #ffffff;
-  margin: -10px;
-  border: none;
-  transition: all 0.3s ease-in-out;
-}
 
-.row {
-  margin-left: 30px;
-  margin-top: 50px;
-}
 .form-group input:focus {
   background-color: #003459;
   color: #ffffff;
@@ -367,95 +347,28 @@ code {
   background-color: #003459;
   color: #ffffff;
 }
-.btn-enviar2 {
-  background-color: #0087bd;
-  color: white;
-  width: 150px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  margin-left: -40px;
-}
-.btn-enviar2:hover {
-  background-color: #003459;
-  color: #ffffff;
-}
 
-.imagen {
-  margin-top: -50px;
-  margin-left: -20px;
-}
-
-.content {
-  margin-top: 100px;
-}
-
-.datos {
+.font-white {
   font-weight: bold;
   color: white;
   font-size: 20px;
 }
-.datos2 {
+
+.text-bold {
+  font-size: 17px;
   font-weight: bold;
-  color: white;
-  font-size: 20px;
-  margin-left: -176px;
-  margin-top: -30px;
-}
-.data {
-  margin-top: -90px;
 }
 
 .herramientas {
   background-color: white;
   color: #004a63;
-  width: 150px;
-  border-radius: 16px;
-  height: 220px;
-  margin-left: -105px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.herramientas2 {
-  background-color: white;
-  color: white;
-  width: 150px;
-  border-radius: 16px;
-  height: 120px;
-  margin-left: -160px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.formColores {
-  margin-top: 280px;
-}
-.herramientas ul {
-  list-style-type: none;
-  margin-left: -30px;
-  font-weight: bold;
-}
-.herramientas ul li:hover {
-  color: #00a8e8;
-  transition: 0.5s;
-}
-.columnaColores {
-  width: 10px;
-  margin-left: 100px;
-  margin-top: -110px;
+  height: 100px;
+  width: 50%;
+  border-radius: 10px;
 }
 
-.datos3 {
-  font-weight: bold;
-  color: white;
-  font-size: 20px;
-  margin-left: -95px;
-  margin-top: -30px;
-}
-
-.padre {
+.bg-blue {
   background-color: #002531;
-  width: 100%;
 }
 
 /* Grid */
@@ -463,17 +376,17 @@ code {
   display: grid;
   grid-template-rows: repeat(30, 1fr);
   grid-template-columns: repeat(30, 1fr);
-  width: 80vw;
-  height: 30vw;
-  outline: 1px solid gray;
+  width: 100%;
+  height: 42vw;
+  outline: 2px dashed white;
 }
 .grid-colores {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(8, 1fr);
-  width: 10vw;
-  height: 7vw;
-  outline: 1px solid white;
+  width: 20vw;
+  height: 15vw;
+  outline: 2px dashed white;
 }
 .cell {
   outline: 1px solid gray;
@@ -496,4 +409,23 @@ code {
   width: 50px;
   background: white;
   transition: all 0.2s ease 0s;
+}
+.re-captcha { 
+  margin: 0px auto;
+  text-align: center;
+  width: 304px;
+  margin-bottom: 10px;
+}
+.icon-nav path{
+  color: #ffffff;
+}
+.icon-nav:hover path {
+  color: #00171F;
+}
+.helper {
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-family: "Open_sans";
+  font-weight: 600;
+  transition: all ease 0.2s;
 }
