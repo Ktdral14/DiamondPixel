@@ -24,7 +24,7 @@ export const Designer = () => {
                 }
                 const nombreDiseno = `lienzo-${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}-${date.getSeconds()}.png`;
                 formData.append('diseno', blob, nombreDiseno);
-                fetch('http://localhost/diamond-pixel-api/public/enviar-diseno', {
+                fetch('http://diamondpixel.tecdevsmx.com/api/enviar-diseno', {
                     method: 'POST',
                     body: formData
                 })
@@ -36,6 +36,7 @@ export const Designer = () => {
                                 icon: 'success',
                                 confirmButtonText: 'Cool'
                             });
+                            document.getElementById("designForm").reset();
                         }
                     })
                     .catch(err => console.log(err));
@@ -188,7 +189,7 @@ export const Designer = () => {
                                     <div className="col-12 mt-3 text-center">
                                         <h4>Datos del envío</h4>
                                     </div>
-                                    <form className="mt-3" onSubmit={handleSubmit(onSubmit)}>
+                                    <form id="designForm" className="mt-3" onSubmit={handleSubmit(onSubmit)}>
                                         <div className="row">
                                             <div className="col-1 p-0 decoration-form"></div>
                                             <div className="col-11 p-0">

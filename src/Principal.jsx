@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import { HashLink } from 'react-router-hash-link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 export const Principal = () => {
     return (
@@ -18,7 +19,7 @@ export const Principal = () => {
                     </a>
                 </div>
                 <div className="col-12 mt-5 text-center">
-                    <a href="#productos" className="btn btn-custom">
+                    <HashLink to="/#productos" className="btn btn-custom">
                         <div className="row justify-content-between align-items-center">
                             <div className="col-6">
                                 Productos
@@ -27,7 +28,7 @@ export const Principal = () => {
                                 <FontAwesomeIcon className="arrowAnimate" icon={faArrowDown} size="1x" />
                             </div>
                         </div>
-                    </a>
+                    </HashLink>
                 </div>
             </div>
         </div>

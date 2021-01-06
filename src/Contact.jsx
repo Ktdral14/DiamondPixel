@@ -12,7 +12,7 @@ export const Contact = () => {
         formData.append('nombre', data.nombre);
         formData.append('correo', data.correo);
         formData.append('mensaje', data.mensaje);
-        fetch('http://localhost/diamond-pixel-api/public/contacto', {
+        fetch('http://diamondpixel.tecdevsmx.com/api/contacto', {
             method: 'POST',
             body: formData
         })
@@ -20,10 +20,11 @@ export const Contact = () => {
                 if (response.ok) {
                     Swal.fire({
                         title: '¡Éxito!',
-                        text: 'Se ha registrado tu pedido.',
+                        text: 'Se ha enviado tu mensaje.',
                         icon: 'success',
-                        confirmButtonText: 'Cool'
+                        confirmButtonText: 'OK'
                     });
+                    document.getElementById("contactForm").reset();
                 }
             })
             .catch(err => console.log(err));
@@ -71,7 +72,7 @@ export const Contact = () => {
                     </div>
                 </div>
                 <div className="col-12 col-md-6 form-contacto mt-3 mt-md-0 m-md-0">
-                    <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
+                    <form id="contactForm" className="mt-5" onSubmit={handleSubmit(onSubmit)}>
                         <div className="row">
                             <div className="col-1 p-0 decoration-form"></div>
                             <div className="col-11 p-0">
