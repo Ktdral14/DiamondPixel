@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+    HashRouter,
     BrowserRouter,
     Switch,
     Route
@@ -11,7 +12,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fab);
 export const App = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Switch>
                 <Route path="/" exact>
                     <Main />
@@ -20,6 +21,6 @@ export const App = () => {
                     <Designer />
                 </Route>
             </Switch>
-        </BrowserRouter>
+        </HashRouter>
     )
 }

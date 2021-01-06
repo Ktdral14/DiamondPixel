@@ -228,7 +228,7 @@ export const Designer = () => {
                                         <div className="text-center">
                                             <ReCAPTCHA
                                                 className="re-captcha"
-                                                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                                                sitekey="6LeLix8aAAAAABpXe62vHITV7IEveN2tlcKjkl9f"
                                                 onChange={handleReCaptchaChange}
                                             />
                                         </div>

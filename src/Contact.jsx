@@ -47,7 +47,7 @@ export const Contact = () => {
                         <div className="col-12 mt-4">
                             <div className="row align-items-center">
                                 <div className="col-1 p-0 ml-3 decoration-info"></div>
-                                <div className="col-11 p-0 pl-2">
+                                <div className="col-8 col-md-11 p-0 pl-2">
                                     <h6><strong>Ubicación:</strong> Colonia Obrera 2 Andador Mante #5 C.P 89885</h6>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@ export const Contact = () => {
                         <div className="col-12 mt-4">
                             <div className="row align-items-center">
                                 <div className="col-1 p-0 ml-3 decoration-info"></div>
-                                <div className="col-11 p-0 pl-2">
+                                <div className="col-8 col-md-11 p-0 pl-2">
                                     <h6><strong>Correo electrónico:</strong> diamondpixelmante@gmail.com</h6>
                                 </div>
                             </div>
@@ -63,14 +63,14 @@ export const Contact = () => {
                         <div className="col-12 mt-4">
                             <div className="row align-items-center">
                                 <div className="col-1 p-0 ml-3 decoration-info"></div>
-                                <div className="col-11 p-0 pl-2">
+                                <div className="col-8 col-md-11 p-0 pl-2">
                                     <h6><strong>Teléfono:</strong> 831-158-2129</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="col-10 col-md-6 form-contacto mt-3 mt-md-0 ml-2 mr-2 m-md-0">
+                <div className="col-12 col-md-6 form-contacto mt-3 mt-md-0 m-md-0">
                     <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
                         <div className="row">
                             <div className="col-1 p-0 decoration-form"></div>
@@ -102,7 +102,7 @@ export const Contact = () => {
                         <div className="text-center">
                             <ReCAPTCHA
                                 className="re-captcha"
-                                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                                sitekey="6LeLix8aAAAAABpXe62vHITV7IEveN2tlcKjkl9f"
                                 onChange={handleReCaptchaChange}
                             />
                         </div>
